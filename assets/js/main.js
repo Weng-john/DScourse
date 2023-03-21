@@ -14,7 +14,10 @@ var formUrl=[
 
 document.querySelector(".confirm").addEventListener("click",()=>{
     let sel= document.getElementById("race").value;
-    console.log(sel)
-    if(sel%1===0)
-        window.location.href= formUrl[sel-1];
+    if(sel%1===0){
+        document.getElementById("loadingArea").classList.add("loadingArea");
+        setTimeout(()=>{
+            window.location.href= formUrl[sel-1];
+        },500);
+    }
 });
