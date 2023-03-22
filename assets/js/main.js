@@ -12,16 +12,15 @@ var formUrl=[
     "https://forms.gle/YckbXWVUzyTyzZHj9"
 ];
 
-document.querySelector(".confirm").addEventListener("click",()=>{
+document.querySelector(".confirm").addEventListener("click",async ()=>{
     let sel= document.getElementById("race").value;
     if(sel%1===0){
-        document.getElementById("loadingArea").classList.add("loadingArea");
-        window.location.href= formUrl[sel-1];
-        /*setTimeout(()=>{
+        let act= new Promise(()=>{
+            document.getElementById("loadingArea").classList.add("loadingArea");
             window.location.href= formUrl[sel-1];
-        },250);
-        setTimeout(()=>{
-            document.getElementById("loadingArea").classList.remove("loadingArea");
-        },5000);*/
+        });
+        
+        let wait= await act;
+        document.getElementById("loadingArea").classList.remove("loadingArea");
     }
 });
