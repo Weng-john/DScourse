@@ -18,6 +18,9 @@ document.querySelector(".confirm").addEventListener("click",()=>{
         document.getElementById("loadingArea").classList.add("loadingArea");
         setTimeout(()=>{
             window.location.href= formUrl[sel-1];
-        },500);
+        },250);
+        setTimeout(()=>{
+            document.getElementById("loadingArea").classList.remove("loadingArea");
+        },10000);
     }
 });
