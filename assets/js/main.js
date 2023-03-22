@@ -16,11 +16,12 @@ document.querySelector(".confirm").addEventListener("click",()=>{
     let sel= document.getElementById("race").value;
     if(sel%1===0){
         document.getElementById("loadingArea").classList.add("loadingArea");
-        setTimeout(()=>{
+        window.location.href= formUrl[sel-1];
+        /*setTimeout(()=>{
             window.location.href= formUrl[sel-1];
         },250);
         setTimeout(()=>{
             document.getElementById("loadingArea").classList.remove("loadingArea");
-        },5000);
+        },5000);*/
     }
 });
