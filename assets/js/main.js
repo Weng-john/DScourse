@@ -12,22 +12,13 @@ var formUrl=[
     "https://forms.gle/YckbXWVUzyTyzZHj9"
 ];
 
-document.querySelector(".confirm").addEventListener("click",Confirm);
-
-function act(sel){
-    return new Promise(res =>{
-        console.log("aaaaaaaaaaaaaaaaa");
-        document.getElementById("loadingArea").classList.add("loadingArea");
-        window.location.href= formUrl[sel-1];
-    })
-}
-
-async function Confirm(){
+document.querySelector(".confirm").addEventListener("click",()=>{
     let sel= document.getElementById("race").value;
     if(sel%1===0){
-        console.log("bbbbbbbbbbbbbbb");
-        await act(sel);
-        alert("cccccccccccccc");
-        document.getElementById("loadingArea").classList.remove("loadingArea");
+        document.getElementById("loadingArea").classList.add("loadingArea");
+        window.location.href= formUrl[sel-1];
+        setTimeout(()=>{
+            document.getElementById("loadingArea").classList.remove("loadingArea");
+        }, 5000);
     }
-}
+});
