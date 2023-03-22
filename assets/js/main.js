@@ -21,6 +21,6 @@ document.querySelector(".confirm").addEventListener("click",()=>{
         },250);
         setTimeout(()=>{
             document.getElementById("loadingArea").classList.remove("loadingArea");
-        },10000);
+        },5000);
     }
 });
