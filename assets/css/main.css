@@ -373,6 +373,7 @@
 		padding: 0 1em;
 		text-decoration: none;
 		width: 100%;
+        background: rgba(255,255,255,0.8);
 	}
 
 		input[type="text"]:invalid,
@@ -914,8 +915,8 @@
 		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
 		transition: opacity 1s ease, transform 1s ease;
 		padding: 4.5em 3em 3em 3em ;
-		background: #ffffff;
-		border-radius: 4px;
+		background: rgba(255,255,255,0.8);
+		border-radius: 20px;
 		cursor: default;
 		max-width: 100%;
 		opacity: 0.95;
@@ -934,7 +935,7 @@
 				display: block;
 				margin: 0 auto;
 				border-radius: 100%;
-				box-shadow: 0 0 0 1.5em #ffffff;
+				box-shadow: 0 0 0 1.5em inherit;
 			}
 
 			#main .avatar:before {
@@ -1105,4 +1106,4 @@
           transform: rotate(360deg)
         }
       }
-    
+   
